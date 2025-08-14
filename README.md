@@ -1,12 +1,6 @@
 # GitHub Codespaces ♥️ React
 
-Welcome to your shiny new Codespace running React! We've got everything fired up and running for you to explore React.
-
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
-
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
-
-This project was bootstrapped for you with [Vite](https://vitejs.dev/).
+bootstrapped with vite
 
 ## Available Scripts
 
@@ -48,10 +42,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ### Code Splitting
 
 This section has moved here: [https://sambitsahoo.com/blog/vite-code-splitting-that-works.html](https://sambitsahoo.com/blog/vite-code-splitting-that-works.html)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer)
 
 ### Making a Progressive Web App
 
