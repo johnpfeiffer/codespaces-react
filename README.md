@@ -1,6 +1,11 @@
 # GitHub Codespaces ♥️ React
 
+with cloudflare deploys to https://feneky.pages.dev/
+
 bootstrapped with vite
+unclear if this still applies
+ [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html)
+
 
 ## Available Scripts
 
@@ -51,9 +56,6 @@ This section has moved here: [https://dev.to/hamdankhan364/simplifying-progressi
 
 This section has moved here: [https://vitejs.dev/guide/build.html#advanced-base-options](https://vitejs.dev/guide/build.html#advanced-base-options)
 
-### Deployment
-
-This section has moved here: [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html)
 
 ### Troubleshooting
 
