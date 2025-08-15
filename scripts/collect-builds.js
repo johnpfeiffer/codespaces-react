@@ -1,23 +1,38 @@
 const fs = require('fs');
 const path = require('path');
 
-// Create final dist directory
+// Create root dist directory if it doesn't exist
 const distDir = path.join(__dirname, '../dist');
 if (!fs.existsSync(distDir)) {
   fs.mkdirSync(distDir, { recursive: true });
 }
 
-// Copy each app's build
-const apps = ['blog'];
+// Create apps subdirectory
+const appsDistDir = path.join(distDir, 'apps');
+if (!fs.existsSync(appsDistDir)) {
+  fs.mkdirSync(appsDistDir, { recursive: true });
+}
+
+// Auto-discover all apps
+const appsDir = path.join(__dirname, '../apps');
+const apps = fs.readdirSync(appsDir)
+  .filter(dir => fs.statSync(path.join(appsDir, dir)).isDirectory());
+
 apps.forEach(app => {
   const source = path.join(__dirname, `../apps/${app}/dist`);
-  const dest = path.join(distDir, `apps/${app}`);
-  fs.cpSync(source, dest, { recursive: true });
+  const dest = path.join(__dirname, `../dist/apps/${app}`);
+  if (fs.existsSync(source)) {
+    fs.cpSync(source, dest, { recursive: true });
+    console.log(`✓ Copied ${app}`);
+  } else {
+    console.log(`⚠ No dist found for ${app}`);
+  }
 });
 
 // Copy functions
-fs.cpSync(
-  path.join(__dirname, '../functions'), 
-  path.join(distDir, 'functions'), 
-  { recursive: true }
-);
+const functionsSource = path.join(__dirname, '../functions');
+const functionsDest = path.join(distDir, 'functions');
+if (fs.existsSync(functionsSource)) {
+  fs.cpSync(functionsSource, functionsDest, { recursive: true });
+  console.log('✓ Copied functions');
+}
