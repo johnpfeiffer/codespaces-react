@@ -16,7 +16,7 @@
     "postcss": "^8.4.31"
   },
   "scripts": {
-    "build": "npm run build:all",
+    "build": "npm run build:all && npm run collect",
     "build:all": "node scripts/build-all-apps.js",
     "collect": "node scripts/collect-builds.js",
     "start": "BROWSER=none WDS_SOCKET_PORT=0 vite --port 3000",
