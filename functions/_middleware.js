@@ -1,60 +1,57 @@
 export async function onRequest(context) {
   const url = new URL(context.request.url);
+  const path = url.pathname;
   
-  // Auto-detect any path that starts with /word
-  const pathMatch = url.pathname.match(/^\/([a-z]+)(\/.*)?$/);
-  
-  if (!pathMatch) {
-    console.log("No app matches the path regex");
+  // Skip if it's already pointing to /apps/ or is a root request
+  if (path === '/') {
     return context.next();
   }
   
-  const appName = pathMatch[1];
-  const relativePath = pathMatch[2] || '/';
+  // Extract app name from path (e.g., /blog/something → blog)
+  const segments = path.split('/').filter(Boolean);
+  if (segments.length === 0) {
+    return context.next();
+  }
   
+  const appName = segments[0];
+  const restOfPath = segments.slice(1).join('/');
+  
+  // List of valid apps (or you could check dynamically)
+  const validApps = ['blog', 'engineer', 'manager']; // Add your apps here
+  
+  if (!validApps.includes(appName)) {
+    console.log("not a valid app name");
+    return context.next();
+  }
   
   console.log(`App: ${appName}`);
   
-  // Check if this app exists
-  const testUrl = new URL(context.request.url);
-  testUrl.pathname = `/apps/${appName}/index.html`;
   
-  const exists = await context.env.ASSETS.fetch(testUrl, { method: 'HEAD' });
-  if (!exists.ok) return context.next();
-  
-  // Rewrite the request to the app's actual location
-  const newUrl = new URL(context.request.url);
-  newUrl.pathname = `/apps/${appName}${relativePath}`;
-  
-  // Fetch the rewritten request
-  const response = await context.env.ASSETS.fetch(newUrl, context.request);
-  
-  // If it's HTML, inject base tag and rewrite asset paths
-  if (response.headers.get('content-type')?.includes('text/html')) {
-    let html = await response.text();
-    
-    // Inject base tag for proper routing
-    html = html.replace(
-      '<head>',
-      `<head><base href="${appPath}/">`
-    );
-    
-        // Rewrite absolute asset paths
-    html = html.replace(/src="\//g, `src="${appPath}/`);
-    html = html.replace(/href="\//g, `href="${appPath}/`);
-    
-    return new Response(html, response);
+  let newPath;
+  if (restOfPath === '' || !restOfPath) {
+    // Root of app - serve index.html
+    newPath = `/apps/${appName}/index.html`;
+  } else if (restOfPath.includes('.')) {
+    // Has file extension - probably an asset
+    newPath = `/apps/${appName}/${restOfPath}`;
+  } else {
+    // No extension - probably a route, serve index.html for SPA
+    newPath = `/apps/${appName}/index.html`;
   }
   
-  // For JS files, rewrite fetch/API calls if needed
-  if (response.headers.get('content-type')?.includes('javascript')) {
-    let js = await response.text();
-    
-    // Rewrite API calls to be relative
-    js = js.replace(/fetch\(['"]\/api/g, `fetch('${appPath}/api`);
-    
-    return new Response(js, response);
+  // Create new request with rewritten path
+  const newUrl = new URL(url);
+  newUrl.pathname = newPath;
+  
+  // Fetch from the new path
+  const response = await fetch(newUrl, context.request);
+  
+  // If it's a 404 and not an asset, try serving index.html
+  if (response.status === 404 && !restOfPath.includes('.')) {
+    newUrl.pathname = `/apps/${appName}/index.html`;
+    return fetch(newUrl, context.request);
   }
   
   return response;
+
 }
