@@ -1,10 +1,24 @@
-# GitHub Codespaces ♥️ React
+# Multi SPA React
 
 with cloudflare deploys to https://feneky.pages.dev/
 
 bootstrapped with vite
-unclear if this still applies
+
  [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html)
+
+3 steps to add a new SPA
+
+apps/mynewthing/
+├── package.json
+├── vite.config.js
+├── index.html
+└── src/
+    └── index.jsx
+
+Update the root /package.json:
+  "cd apps/dashboard && ...
+
+Update the collector: scripts/collect-builds.js:
 
 
 ## Available Scripts
