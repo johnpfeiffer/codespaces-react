@@ -4,10 +4,16 @@ export async function onRequest(context) {
   // Auto-detect any path that starts with /word
   const pathMatch = url.pathname.match(/^\/([a-z]+)(\/.*)?$/);
   
-  if (!pathMatch) return context.next();
+  if (!pathMatch) {
+    console.log("No app matches the path regex");
+    return context.next();
+  }
   
   const appName = pathMatch[1];
   const relativePath = pathMatch[2] || '/';
+  
+  
+  console.log(`App: ${appName}`);
   
   // Check if this app exists
   const testUrl = new URL(context.request.url);
