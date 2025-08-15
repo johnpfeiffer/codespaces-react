@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "npm run build:all",
-    "build:all": "cd apps/blog && npm install && npm run build && cd ../.. && npm run collect",
+    "build:all": "cd apps/blog && npm install && npm run build && cd ../engineer && npm install && npm run build && cd apps/manager && npm install && npm run build && cd ../.. && npm run collect",
     "collect": "node scripts/collect-builds.js",
     "start": "BROWSER=none WDS_SOCKET_PORT=0 vite --port 3000",
     "preview": "vite preview",
