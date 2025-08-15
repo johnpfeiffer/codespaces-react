@@ -3,8 +3,9 @@ export async function onRequest(context) {
   
   // Map subdirectories to SPAs
   const apps = {
-    '/mgr': 'manager', 
-    '/blog': 'blog'
+    '/blog': 'blog',
+    '/engineer': 'engineer',
+    '/manager': 'manager'
   };
   // Find which app this request is for
   const appPath = Object.keys(apps).find(path => 
