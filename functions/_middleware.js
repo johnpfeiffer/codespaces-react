@@ -1,24 +1,20 @@
 export async function onRequest(context) {
   const url = new URL(context.request.url);
   
-  // Map subdirectories to SPAs
-  const apps = {
-    '/blog': 'blog',
-    '/engineer': 'engineer',
-    '/manager': 'manager'
-  };
-  // Find which app this request is for
-  const appPath = Object.keys(apps).find(path => 
-    url.pathname.startsWith(path)
-  );
+  // Auto-detect any path that starts with /word
+  const pathMatch = url.pathname.match(/^\/([a-z]+)(\/.*)?$/);
   
-  if (!appPath) {
-    // Not an app route - serve normally
-    return context.next();
-  }
+  if (!pathMatch) return context.next();
   
-  const appName = apps[appPath];
-  const relativePath = url.pathname.slice(appPath.length) || '/';
+  const appName = pathMatch[1];
+  const relativePath = pathMatch[2] || '/';
+  
+  // Check if this app exists
+  const testUrl = new URL(context.request.url);
+  testUrl.pathname = `/apps/${appName}/index.html`;
+  
+  const exists = await context.env.ASSETS.fetch(testUrl, { method: 'HEAD' });
+  if (!exists.ok) return context.next();
   
   // Rewrite the request to the app's actual location
   const newUrl = new URL(context.request.url);
