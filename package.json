@@ -2,14 +2,13 @@
   "name": "codespaces-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://johnpfeiffer.github.io/myreact",
+  "homepage": "https://feneky.cloud.dev",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "web-vitals": "^3.1.0"
+    "react-dom": "^18.2.0"
   },
   "overrides": {
     "@svgr/webpack": "^8.0.1",
@@ -17,12 +16,12 @@
     "postcss": "^8.4.31"
   },
   "scripts": {
+    "build": "npm run build:all",
+    "build:all": "cd apps/blog && npm install && npm run build && cd ../.. && npm run collect",
+    "collect": "node scripts/collect-builds.js",
     "start": "BROWSER=none WDS_SOCKET_PORT=0 vite --port 3000",
-    "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "vitest"
   },
   "eslintConfig": {
     "extends": [
