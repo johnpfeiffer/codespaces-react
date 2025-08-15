@@ -6,7 +6,7 @@ bootstrapped with vite
 
  [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html)
 
-3 steps to add a new SPA
+steps to add a new SPA
 
 apps/mynewthing/
 ├── package.json
@@ -15,10 +15,7 @@ apps/mynewthing/
 └── src/
     └── index.jsx
 
-Update the root /package.json:
-  "cd apps/dashboard && ...
-
-Update the collector: scripts/collect-builds.js:
+/package.json already runs /scripts "build-all-apps.js" and "collect-builds.js"
 
 
 ## Available Scripts
