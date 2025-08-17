@@ -1,26 +1,15 @@
 
+import { Routes, Route } from 'react-router-dom';
+import BlogList from './components/BlogList';
+import BlogPost from './components/BlogPost';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          mobile dev success <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+      <Routes>
+        <Route path="/" element={<BlogList />} />
+        <Route path="/post/:slug" element={<BlogPost />} />
+      </Routes>
     </div>
   );
 }
