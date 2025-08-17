@@ -1,26 +1,23 @@
 
+import React, { useState } from 'react';
+import { Link, sampleLinks } from './models/Link';
+import LinkList from './components/LinkList';
 
 function App() {
+  const [links, setLinks] = useState(sampleLinks);
+
+  const handleAddLink = (url, title, tags) => {
+    const newLink = new Link(url, title, tags);
+    setLinks([...links, newLink]);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          People Manager Links <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
+        <h1>Manager's Resource Hub</h1>
+        <p className="subtitle">Curated links for podcasts, blogs, and resources</p>
       </header>
+      <LinkList links={links} onAddLink={handleAddLink} />
     </div>
   );
 }
