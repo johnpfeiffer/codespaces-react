@@ -1,23 +1,9 @@
 import React, { useState } from 'react';
 
-function LinkList({ links, onAddLink }) {
-  const [newUrl, setNewUrl] = useState('');
-  const [newTitle, setNewTitle] = useState('');
-  const [newTags, setNewTags] = useState('');
+function LinkList({ links }) {
   const [selectedTags, setSelectedTags] = useState([]);
 
   const allTags = [...new Set(links.flatMap(link => link.tags))].sort();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (newUrl && newTitle) {
-      const tags = newTags.split(',').map(tag => tag.trim()).filter(Boolean);
-      onAddLink(newUrl, newTitle, tags);
-      setNewUrl('');
-      setNewTitle('');
-      setNewTags('');
-    }
-  };
 
   const toggleTagFilter = (tag) => {
     setSelectedTags(prev =>
@@ -33,31 +19,6 @@ function LinkList({ links, onAddLink }) {
 
   return (
     <>
-      <section className="add-link-form">
-        <h3>Add New Link</h3>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Title"
-            value={newTitle}
-            onChange={(e) => setNewTitle(e.target.value)}
-          />
-          <input
-            type="url"
-            placeholder="URL"
-            value={newUrl}
-            onChange={(e) => setNewUrl(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Tags (comma-separated)"
-            value={newTags}
-            onChange={(e) => setNewTags(e.target.value)}
-          />
-          <button type="submit">Add Link</button>
-        </form>
-      </section>
-
       <section className="tag-filters">
         <h3>Filter by Tags</h3>
         <div className="tag-list">

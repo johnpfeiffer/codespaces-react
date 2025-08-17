@@ -36,51 +36,6 @@ body {
   margin-top: 0.25rem;
 }
 
-.add-link-form {
-  margin-bottom: 2rem;
-}
-
-.add-link-form h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #000;
-}
-
-.add-link-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.add-link-form input {
-  padding: 0.5rem;
-  border: 1px solid #d1d5db;
-  border-radius: 3px;
-  font-size: 0.875rem;
-  font-family: inherit;
-}
-
-.add-link-form input:focus {
-  outline: none;
-  border-color: #2563eb;
-}
-
-.add-link-form button {
-  align-self: flex-start;
-  padding: 0.5rem 1rem;
-  background: #000;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  font-size: 0.875rem;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.add-link-form button:hover {
-  background: #333;
-}
 
 .tag-filters {
   margin-bottom: 2rem;
@@ -184,18 +139,3 @@ body {
   border: 1px solid #d1d5db;
 }
 
-@media (min-width: 640px) {
-  .add-link-form form {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  
-  .add-link-form input {
-    flex: 1;
-    min-width: 200px;
-  }
-  
-  .add-link-form button {
-    align-self: center;
-  }
-}
