@@ -1,44 +1,757 @@
 {
   "links": [
-    {
-      "title": "a16z Podcast",
-      "url": "https://a16z.com/podcast/",
-      "tags": ["VC", "Technology", "Startups"]
-    },
-    {
-      "title": "Farnam Street Blog",
-      "url": "https://fs.blog/",
-      "tags": ["Mental Models", "Decision Making", "Leadership"]
-    },
-    {
-      "title": "Stratechery",
-      "url": "https://stratechery.com/",
-      "tags": ["Business Strategy", "Technology", "Analysis"]
-    },
-    {
-      "title": "Y Combinator Blog",
-      "url": "https://www.ycombinator.com/blog",
-      "tags": ["VC", "Startups", "Entrepreneurship"]
-    },
-    {
-      "title": "Harvard Business Review Podcasts",
-      "url": "https://hbr.org/podcasts",
-      "tags": ["Management", "Leadership", "Business"]
-    },
-    {
-      "title": "TED Talks - Technology",
-      "url": "https://www.ted.com/topics/technology",
-      "tags": ["Technology", "Innovation", "Computer Science"]
-    },
-    {
-      "title": "Sam Altman's Blog",
-      "url": "https://blog.samaltman.com/",
-      "tags": ["AI", "Startups", "VC", "Technology"]
-    },
-    {
-      "title": "AI and the Future of Work",
-      "url": "https://www.youtube.com/watch?v=example1",
-      "tags": ["AI", "Future of Work", "Management"]
-    }
-  ]
-}
+  {
+    "title": "Characterizing People as Non-linear, First-order Components in Software Development",
+    "url": "https://alistair.cockburn.us/Characterizing+people+as+non-linear%2c+first-order+components+in+software+development",
+    "tags": ["Engineering Management", "People Management", "Software Development", "Team Dynamics"]
+  },
+  {
+    "title": "The Hardest, Shortest Lesson: Becoming a Manager",
+    "url": "https://cate.blog/2015/12/23/the-hardest-shortest-lesson-becoming-a-manager/",
+    "tags": ["Management Transition", "Leadership", "Career Development"]
+  },
+  {
+    "title": "Managers Playbook covering lots of areas",
+    "url": "https://github.com/ksindi/managers-playbook",
+    "tags": ["Engineering Management", "Reference"]
+  },
+  {
+    "title": "Just About Managing (People) - Go Time Podcast",
+    "url": "https://changelog.com/gotime/203",
+    "tags": ["Engineering Management", "Podcast", "People Management", "Leadership"]
+  },
+  {
+    "title": "SE Radio: Managing Programmers with Ron Lichty",
+    "url": "https://www.se-radio.net/2017/10/se-radio-episode-306-ron-lichty-on-managing-programmers",
+    "tags": ["Podcast", "Engineering Management", "Software Engineering"]
+  },
+  {
+    "title": "SE Radio: Motivating Programmers with Marcus Blankenship",
+    "url": "https://www.se-radio.net/2019/07/episode-374-marcus-blankenship-on-motivating-programmers/",
+    "tags": ["Podcast", "Motivation", "Engineering Management"]
+  },
+  {
+    "title": "Camille Fournier on Managing Technical Teams",
+    "url": "https://blog.ycombinator.com/camille-fournier-on-managing-technical-teams/",
+    "tags": ["Technical Leadership", "Team Management"]
+  },
+  {
+    "title": "SE Radio: Scaling Technology and Organization with Randy Shoup",
+    "url": "https://www.se-radio.net/2019/02/se-radio-episode-355-randy-shoup-scaling-technology-and-organization/",
+    "tags": ["Podcast", "Scaling", "Organization", "Technology"]
+  },
+  {
+    "title": "Building Managers: Leading from the Back, Leading from the Front",
+    "url": "https://www.effectiveem.com/building-managers-leading-from-the-back-leading-from-the-front/",
+    "tags": ["Leadership Styles", "Management Development", "Team Building"]
+  },
+  {
+    "title": "Why Should You or Anyone Become an Engineering Manager?",
+    "url": "https://charity.wtf/2023/12/15/why-should-you-or-anyone-become-an-engineering-manager/",
+    "tags": ["Career Transition", "Engineering Management", "Leadership"]
+  },
+  {
+    "title": "SE Radio: Revitalizing a Cross-functional Product Organization",
+    "url": "https://www.se-radio.net/2018/10/se-radio-episode-340-lara-hogan-and-deepa-subramaniam-on-revitalizing-a-cross-functional-product-organization",
+    "tags": ["Podcast", "Product Organization", "Cross-functional Teams"]
+  },
+  {
+    "title": "Manager Tools: Role Power Revisited - You Speak CEO Part 1",
+    "url": "https://www.manager-tools.com/2019/02/role-power-revisited-you-speak-ceo-part-1",
+    "tags": ["Manager Tools", "Executive Communication", "Authority"] },
+  {
+    "title": "Manager Tools: Results and Retention Part 1",
+    "url": "https://www.manager-tools.com/2015/06/results-and-retention-part-1-hall-fame-guidance",
+    "tags": ["Manager Tools", "Employee Retention", "Performance"]
+  },
+  {
+    "title": "Manager Tools: Results and Retention Part 2",
+    "url": "https://www.manager-tools.com/2015/06/results-and-retention-part-2-hall-fame-guidance",
+    "tags": ["Manager Tools", "Employee Retention", "Performance"]
+  },
+  {
+    "title": "Maker to Manager",
+    "url": "https://www.intercom.com/blog/maker-to-manager",
+    "tags": ["Career Transition", "Management", "Engineering"]
+  },
+  {
+    "title": "How to Tell if You're a Good Manager",
+    "url": "https://qz.com/work/1447711/how-to-tell-if-youre-a-good-manager/",
+    "tags": ["Management Assessment", "Self-Reflection", "Leadership"]
+  },
+  {
+    "title": "The Art of Making Good Decisions",
+    "url": "https://www.developingleadership.co/episode/episode-3-the-art-of-making-good-decisions",
+    "tags": ["Decision Making", "Leadership", "Podcast"]
+  },
+  {
+    "title": "Energy Audit: Reclaiming Time, Increasing Ownership",
+    "url": "https://sfelc.com/podcasts/energy-audit-reclaiming-time-increasing-ownership-brad-henrickson",
+    "tags": ["Time Management", "Productivity", "Ownership"]
+  },
+  {
+    "title": "Lex Fridman Podcast: Cal Newport on Deep Work",
+    "url": "https://lexfridman.com/cal-newport/",
+    "tags": ["Deep Work", "Productivity", "Focus"]
+  },
+  {
+    "title": "How Much to Manage: Management Energy Units",
+    "url": "https://medium.learningbyshipping.com/how-much-to-manage-management-energy-units-ca1637a05140",
+    "tags": ["Management Energy", "Prioritization", "Resource Allocation"]
+  },
+  {
+    "title": "How to Think",
+    "url": "https://fs.blog/how-to-think/",
+    "tags": ["Critical Thinking", "Mental Models", "Decision Making"]
+  },
+  {
+    "title": "The Happier Podcast: Shane Parrish",
+    "url": "https://www.happierapp.com/podcast/tph/shane-parrish",
+    "tags": ["Podcast", "Mental Models", "Thinking"]
+  },
+  {
+    "title": "The Happier Podcast: Laura Vanderkam",
+    "url": "https://www.happierapp.com/podcast/tph/laura-vanderkam-606",
+    "tags": ["Podcast", "Time Management", "Productivity"]
+  },
+  {
+    "title": "Making Better Decisions with Annie Duke",
+    "url": "https://www.lennysnewsletter.com/p/making-better-decisions-annie-duke",
+    "tags": ["Decision Making", "Risk Management", "Strategy"]
+  },
+  {
+    "title": "Lessons on Being Deliberate",
+    "url": "https://sfelc.com/annual2022/topics/lessons-on-being-deliberate",
+    "tags": ["Intentionality", "Leadership", "Strategy"]
+  },
+  {
+    "title": "What I Hear When You Tell Me Your Company Doesn't Do Meetings",
+    "url": "https://mfbt.ca/what-i-hear-when-you-tell-me-your-company-doesnt-do-meetings-dfbb57a038d6?gi=9c2f0ad8ab87",
+    "tags": ["Meetings", "Communication", "Collaboration"]
+  },
+  {
+    "title": "What We Get Wrong About Meetings and How to Make Them Worth Attending",
+    "url": "https://timharford.com/2019/08/what-we-get-wrong-about-meetings-and-how-to-make-them-worth-attending/",
+    "tags": ["Meetings", "Productivity", "Communication"]
+  },
+  {
+    "title": "TED WorkLife: Why Meetings Suck and How to Fix Them",
+    "url": "https://www.ted.com/podcasts/worklife/why-meetings-suck-and-how-to-fix-them-transcript",
+    "tags": ["Meetings", "Productivity", "TED", "Podcast"]
+  },
+  {
+    "title": "What Are Story Time Meetings For?",
+    "url": "https://switchingtoscrum.wordpress.com/2012/11/28/what-are-story-time-meetings-for/",
+    "tags": ["Agile", "Scrum", "Meetings"]
+  },
+  {
+    "title": "Knowledge Project: Todd Simkin on Making Better Decisions",
+    "url": "https://fs.blog/knowledge-project-podcast/todd-simkin/",
+    "tags": ["Decision Making", "Podcast", "Strategy"]
+  },
+  {
+    "title": "Square Defangs Difficult Decisions with This System",
+    "url": "https://firstround.com/review/square-defangs-difficult-decisions-with-this-system-heres-how/",
+    "tags": ["Decision Making", "Process", "Systems"]
+  },
+  {
+    "title": "The 90% Agreement Rule",
+    "url": "https://hackernoon.com/the-90-agreement-rule-36757dcc8eaa",
+    "tags": ["Decision Making", "Consensus", "Team Dynamics"]
+  },
+  {
+    "title": "The Dangers of Measuring Performance",
+    "url": "https://medium.com/startup-patterns/the-dangers-of-measuring-performance-d21cd61426df",
+    "tags": ["Performance Management", "Metrics", "Measurement"]
+  },
+  {
+    "title": "Keys to OKR Success: Q&A with John Doerr",
+    "url": "https://www.betterworks.com/magazine/keys-okr-success-qa-john-doerr/",
+    "tags": ["OKRs", "Goal Setting", "Performance"]
+  },
+  {
+    "title": "How to Write Great OKR Objectives",
+    "url": "https://medium.com/agileinsider/how-to-write-great-okr-objectives-91a2d6b5c75e",
+    "tags": ["OKRs", "Goal Setting", "Objectives"]
+  },
+  {
+    "title": "Y Combinator: Setting KPIs and Goals",
+    "url": "https://www.ycombinator.com/library/Iu-setting-kpis-and-goals",
+    "tags": ["KPIs", "Goal Setting", "Y Combinator"]
+  },
+  {
+    "title": "Y Combinator: Setting Smarter Goals",
+    "url": "https://www.ycombinator.com/library/Id-dalton-michael-setting-smarter-goals",
+    "tags": ["Goal Setting", "Y Combinator", "Strategy"]
+  },
+  {
+    "title": "Let's Talk About OKRs",
+    "url": "https://www.developingleadership.co/episode/lets-talk-about-okrs",
+    "tags": ["OKRs", "Goal Setting", "Podcast"]
+  },
+  {
+    "title": "Manager Tools: Preparing Performance Reviews (2018)",
+    "url": "https://www.manager-tools.com/2018/11/preparing-performance-reviews-hof-2018",
+    "tags": ["Performance Reviews", "Manager Tools", "Accountability"]
+  },
+  {
+    "title": "Manager Tools: Delivering Performance Reviews (2018)",
+    "url": "https://www.manager-tools.com/2018/11/delivering-performance-review-hof-2018",
+    "tags": ["Performance Reviews", "Manager Tools", "Accountability"]
+  },
+  {
+    "title": "Manager Tools: Preparing Performance Reviews (2021)",
+    "url": "https://manager-tools.com/2021/11/preparing-performance-reviews-hof-2021",
+    "tags": ["Performance Reviews", "Manager Tools", "Accountability"]
+  },
+  {
+    "title": "Manager Tools: Delivering Performance Reviews (2021)",
+    "url": "https://manager-tools.com/2021/11/delivering-performance-review-hof-2021",
+    "tags": ["Performance Reviews", "Manager Tools", "Accountability"]
+  },
+  {
+    "title": "Radical Candor Podcast: Development vs Management",
+    "url": "https://www.radicalcandor.com/podcast/podcast-season-3-episode-8/",
+    "tags": ["Radical Candor", "Development", "Management", "Podcast"]
+  },
+  {
+    "title": "HBR: How Do I Hold My Team Accountable?",
+    "url": "https://hbr.org/podcast/2022/05/how-do-i-hold-my-team-accountable",
+    "tags": ["Accountability", "Team Management", "HBR", "Podcast"]
+  },
+  {
+    "title": "Tuckman's Stages of Group Development",
+    "url": "https://en.wikipedia.org/wiki/Tuckman%27s_stages_of_group_development",
+    "tags": ["Team Development", "Group Dynamics", "Psychology"]
+  },
+  {
+    "title": "Manager Tools: Horstman's Law - Project Management Part 1",
+    "url": "https://www.manager-tools.com/2009/01/horstman%E2%80%99s-law-project-management-part-1-hall-fame-guidance",
+    "tags": ["Project Management", "Manager Tools", "Planning"]
+  },
+  {
+    "title": "Manager Tools: Rules of Small Project Management",
+    "url": "https://www.manager-tools.com/2020/02/rules-small-project-management-chapter-1-deliverables-basics-part-1-hall-fame-guidance",
+    "tags": ["Project Management", "Manager Tools", "Small Projects"]
+  },
+  {
+    "title": "Manager Tools: The Juggling Koan - Delegation",
+    "url": "https://www.manager-tools.com/2007/01/the-juggling-koan",
+    "tags": ["Delegation", "Manager Tools", "Time Management"]
+  },
+  {
+    "title": "Manager Tools: How to Choose What to Delegate",
+    "url": "https://www.manager-tools.com/2010/05/how-choose-what-delegate-hall-fame-guidance",
+    "tags": ["Delegation", "Manager Tools", "Prioritization"]
+  },
+  {
+    "title": "Manager Tools: Delegating to the Floor",
+    "url": "https://www.manager-tools.com/2012/02/delegating-floor",
+    "tags": ["Delegation", "Manager Tools", "Authority"]
+  },
+  {
+    "title": "Manager Tools: Coaching Model Revised",
+    "url": "https://www.manager-tools.com/2009/07/coaching-model-revised",
+    "tags": ["Coaching", "Manager Tools", "Development"]
+  },
+  {
+    "title": "Manager Tools: Coaching Model Part 2",
+    "url": "https://www.manager-tools.com/2009/07/coaching-model-part-2-hall-fame-guidance",
+    "tags": ["Coaching", "Manager Tools", "Development"]
+  },
+  {
+    "title": "Manager Tools: One on Ones - The Single Most Effective Management Tool Part 1",
+    "url": "https://www.manager-tools.com/2005/07/the-single-most-effective-management-tool-part-1",
+    "tags": ["One on Ones", "Communication", "Manager Tools"]
+  },
+  {
+    "title": "Manager Tools: One on Ones - The Single Most Effective Management Tool Part 2",
+    "url": "https://www.manager-tools.com/2005/07/the-single-most-effective-management-tool-part-2",
+    "tags": ["One on Ones", "Communication", "Manager Tools"]
+  },
+  {
+    "title": "Manager Tools: One on Ones - The Single Most Effective Management Tool Part 3",
+    "url": "https://www.manager-tools.com/2005/07/the-single-most-effective-management-tool-part-3",
+    "tags": ["One on Ones", "Communication", "Manager Tools"]
+  },
+  {
+    "title": "Radical Candor: Push Decisions into Facts",
+    "url": "https://www.radicalcandor.com/podcast/push-decisions-into-facts/",
+    "tags": ["Decision Making", "Facts", "Radical Candor", "Podcast"]
+  },
+  {
+    "title": "How to Ask Good Questions",
+    "url": "https://jvns.ca/blog/good-questions/",
+    "tags": ["Communication", "Questioning", "Learning"]
+  },
+  {
+    "title": "Mastering Difficult Conversations with Sarah Clatterbuck",
+    "url": "https://podcasts.apple.com/us/podcast/mastering-difficult-conversations-sarah-clatterbuck/id1481996448?i=1000451921123",
+    "tags": ["Difficult Conversations", "Communication", "Podcast"]
+  },
+  {
+    "title": "Video: Difficult Conversations Session",
+    "url": "https://www.youtube.com/watch?v=3Gep3IDc8ow",
+    "tags": ["Difficult Conversations", "Communication", "Video"]
+  },
+  {
+    "title": "Knowledge Project: Sheila Heen on Decoding Difficult Conversations",
+    "url": "https://fs.blog/knowledge-project-podcast/sheila-heen/",
+    "tags": ["Difficult Conversations", "Communication", "Podcast"]
+  },
+  {
+    "title": "Hidden Brain: Why Conversations Go Wrong",
+    "url": "https://hiddenbrain.org/podcast/why-conversations-go-wrong/",
+    "tags": ["Communication", "Psychology", "Conversations", "Podcast"]
+  },
+  {
+    "title": "Build Robust Relationships with Carole Robin",
+    "url": "https://www.lennysnewsletter.com/p/build-robust-relationships-carole-robin",
+    "tags": ["Relationships", "Communication", "Leadership"]
+  },
+  {
+    "title": "Jordan Harbinger: Robert Cialdini on Influence",
+    "url": "https://www.jordanharbinger.com/robert-cialdini-a-new-look-at-the-science-of-influence/",
+    "tags": ["Influence", "Persuasion", "Psychology", "Podcast"]
+  },
+  {
+    "title": "Guy Kawasaki: Robert Cialdini - The Godfather of Influence",
+    "url": "https://guykawasaki.com/dr-robert-cialdini-the-godfather-of-influence/",
+    "tags": ["Influence", "Persuasion", "Psychology", "Podcast"]
+  },
+  {
+    "title": "A Primer on Giving Critical Feedback",
+    "url": "https://www.tombartel.me/blog/a-primer-on-giving-critical-feedback/",
+    "tags": ["Feedback", "Communication", "Management"]
+  },
+  {
+    "title": "Manager Tools: Negative Feedback Pushback Examples Part 1",
+    "url": "https://www.manager-tools.com/2019/10/negative-feedback-pushback-examples-part-1",
+    "tags": ["Feedback", "Manager Tools", "Difficult Conversations"]
+  },
+  {
+    "title": "How to Give Good Feedback",
+    "url": "https://podcasts.apple.com/us/podcast/how-to-give-good-feedback/id1461493560?i=1000532766966",
+    "tags": ["Feedback", "Communication", "Podcast"]
+  },
+  {
+    "title": "The Value of Being Direct with Eisar Lipkovitz",
+    "url": "https://sfelc.com/podcasts/the-value-of-being-direct-eisar-lipkovitz",
+    "tags": ["Direct Communication", "Feedback", "Leadership"]
+  },
+  {
+    "title": "Stripe Atlas: Scaling Engineering (a 1-2-3 guide to hiring engineers)",
+    "url": "https://stripe.com/atlas/guides/scaling-eng",
+    "tags": ["Hiring", "Scaling", "Engineering", "Recruiting"]
+  },
+  {
+    "title": "First Round: The Anatomy of the Perfect Technical Interview",
+    "url": "https://firstround.com/review/The-anatomy-of-the-perfect-technical-interview-from-a-former-Amazon-VP/",
+    "tags": ["Technical Interviews", "Hiring", "Recruiting"]
+  },
+  {
+    "title": "First Round: What You Want in a VP Eng",
+    "url": "https://firstround.com/review/What-You-Want-in-a-VP-Eng-from-the-Recruiters-Behind-Twitter-and-LinkedIn/",
+    "tags": ["VP Engineering", "Hiring", "Leadership"]
+  },
+  {
+    "title": "How to Conduct a Good Programming Interview",
+    "url": "https://www.lihaoyi.com/post/HowtoconductagoodProgrammingInterview.html",
+    "tags": ["Programming Interviews", "Hiring", "Technical Assessment"]
+  },
+  {
+    "title": "Happy 10th Birthday to HTHAPM",
+    "url": "https://www.kennorton.com/essays/happy-10th-birthday-to-hthapm.html",
+    "tags": ["Product Management", "Hiring", "Career"]
+  },
+  {
+    "title": "Guy Kawasaki: The Inside Scoop (Pragmatic Resume and Interview Prep)",
+    "url": "https://guykawasaki.com/the_inside_scoo/",
+    "tags": ["Interviewing", "Resume", "Career", "Podcast"]
+  },
+  {
+    "title": "Managing Up Show: Actually Managing Up",
+    "url": "https://www.managingup.show/episodes/actually-managing-up",
+    "tags": ["Managing Up", "Leadership", "Podcast"]
+  },
+  {
+    "title": "HBR: How Can I Get Along with My Difficult Boss?",
+    "url": "https://hbr.org/podcast/2022/09/how-can-i-get-along-with-my-difficult-boss-from-hbrs-women-at-work",
+    "tags": ["Managing Up", "Difficult Relationships", "HBR", "Podcast"]
+  },
+  {
+    "title": "HBR: How Do I Overcome My Disillusionment with the Executive Team?",
+    "url": "https://hbr.org/podcast/2022/11/how-do-i-overcome-my-disillusionment-with-the-executive-team",
+    "tags": ["Managing Up", "Executive Relations", "HBR", "Podcast"]
+  },
+  {
+    "title": "SE Radio: Engineering Maturity with Jean Denis Greze",
+    "url": "https://www.se-radio.net/2019/03/se-radio-episode-359-engineering-maturity-with-jean-denis-greze/",
+    "tags": ["Engineering Maturity", "Software Engineering", "Podcast"]
+  },
+  {
+    "title": "Changing Priorities and Making Massive Engineering Pivots with Vivian Shen",
+    "url": "https://sfelc.com/podcasts/changing-priorities-and-making-massive-engineering-pivots-vivian-shen",
+    "tags": ["Engineering Strategy", "Pivots", "Leadership"]
+  },
+  {
+    "title": "Manager Tools: Employee Retention",
+    "url": "https://www.manager-tools.com/2018/06/employee-retention-hof",
+    "tags": ["Employee Retention", "Manager Tools", "HR"]
+  },
+  {
+    "title": "SE Radio: Speaking at Tech Conferences with Karl Hughes",
+    "url": "https://www.se-radio.net/2020/03/episode-403-karl-hughes-on-speaking-at-tech-conferences/",
+    "tags": ["Tech Conferences", "Public Speaking", "Career Development", "Podcast"]
+  },
+  {
+    "title": "Engineering Execution is a Strategic Weapon",
+    "url": "https://sfelc.com/podcasts/engineering-execution-is-a-strategic-weapon-bill-coughran-sequoia-capital-melody-meckfessel-observable",
+    "tags": ["Engineering Execution", "Strategy", "Leadership"]
+  },
+  {
+    "title": "Manager Tools: Steel Cage Death Match Meetings Part 1",
+    "url": "https://www.manager-tools.com/2011/11/steel-cage-death-match-meetings-part-1",
+    "tags": ["Meetings", "Manager Tools", "Conflict Resolution"]
+  },
+  {
+    "title": "Manager Tools: Steel Cage Death Match Meetings Part 2",
+    "url": "https://www.manager-tools.com/2011/12/steel-cage-death-match-meetings-part-2-hall-fame-guidance",
+    "tags": ["Meetings", "Manager Tools", "Conflict Resolution"]
+  },
+  {
+    "title": "Manager Tools: All Podcasts",
+    "url": "https://www.manager-tools.com/all-podcasts",
+    "tags": ["Manager Tools", "Podcast Directory", "Resources"]
+  },
+  {
+    "title": "Lenny's Newsletter: The Essence of Product Management",
+    "url": "https://www.lennysnewsletter.com/p/the-essence-of-product-management",
+    "tags": ["Product Management", "Strategy", "Leadership"]
+  },
+  {
+    "title": "Lenny's Newsletter: Product Management Theater with Marty Cagan",
+    "url": "https://www.lennysnewsletter.com/p/product-management-theater-marty",
+    "tags": ["Product Management", "Strategy", "Best Practices"]
+  },
+  {
+    "title": "Lenny's Newsletter: The Nature of Product with Marty Cagan",
+    "url": "https://www.lennysnewsletter.com/p/the-nature-of-product-marty-cagan",
+    "tags": ["Product Management", "Strategy", "Philosophy"]
+  },
+  {
+    "title": "Lenny's Newsletter: Mastering Product Strategy and Growing",
+    "url": "https://www.lennysnewsletter.com/p/mastering-product-strategy-and-growing",
+    "tags": ["Product Strategy", "Growth", "Leadership"]
+  },
+  {
+    "title": "Reduce Friction and Create Better Alignment Between Product and Engineering",
+    "url": "https://sfelc.com/podcasts/reduce-friction-and-create-better-alignment-between-product-and-engineering-hubert-palan-productboard",
+    "tags": ["Product Engineering Alignment", "Collaboration", "Process"]
+  },
+  {
+    "title": "Plant a Tree You'll Never See",
+    "url": "https://tomtunguz.com/plant-a-tree-youll-never-see",
+    "tags": ["Long-term Thinking", "Leadership", "Ethics"]
+  },
+  {
+    "title": "First Round: 13 Exercises for Work's Toughest Situations",
+    "url": "https://firstround.com/review/these-13-exercises-will-prepare-you-for-works-toughest-situations/",
+    "tags": ["Problem Solving", "Leadership", "Training"]
+  },
+  {
+    "title": "The Best Career Advice I've Received",
+    "url": "https://humanwhocodes.com/blog/2013/10/15/the-best-career-advice-ive-received/",
+    "tags": ["Career Advice", "Professional Development", "Growth"]
+  },
+  {
+    "title": "First Round: 6 Must Reads for Scaling Yourself as a Leader",
+    "url": "https://firstround.com/review/our-6-must-reads-for-scaling-yourself-as-a-leader/",
+    "tags": ["Leadership Development", "Scaling", "Growth"]
+  },
+  {
+    "title": "HN Discussion: Crowdsourcing 1:1 Ideas",
+    "url": "https://news.ycombinator.com/item?id=18264245",
+    "tags": ["One on Ones", "Discussion", "Best Practices"]
+  },
+  {
+    "title": "HN Discussion: Signs of a Great Manager (2019)",
+    "url": "https://news.ycombinator.com/item?id=20230133",
+    "tags": ["Management Quality", "Discussion", "Leadership"]
+  },
+  {
+    "title": "HN Discussion: Engineering Management (2017)",
+    "url": "https://news.ycombinator.com/item?id=14381264",
+    "tags": ["Engineering Management", "Discussion", "Best Practices"]
+  },
+  {
+    "title": "Lessons from Stripe",
+    "url": "https://markmcgranaghan.com/lessons-from-stripe",
+    "tags": ["Company Culture", "Stripe", "Lessons Learned"]
+  },
+  {
+    "title": "Spotify Engineering Culture Part 1",
+    "url": "https://labs.spotify.com/2014/03/27/spotify-engineering-culture-part-1/",
+    "tags": ["Engineering Culture", "Spotify", "Team Structure"]
+  },
+  {
+    "title": "Spotify Engineering Culture Part 2",
+    "url": "https://labs.spotify.com/2014/09/20/spotify-engineering-culture-part-2/",
+    "tags": ["Engineering Culture", "Spotify", "Team Structure"]
+  },
+  {
+    "title": "Keeping Information Flowing as You Grow",
+    "url": "https://www.intercom.com/blog/keeping-information-flowing-as-you-grow/",
+    "tags": ["Information Flow", "Scaling", "Communication"]
+  },
+  {
+    "title": "Yes Virginia, You Can Estimate That",
+    "url": "https://medium.com/@skamille/yes-virginia-you-can-estimate-that-e33303eec9cf",
+    "tags": ["Estimation", "Project Management", "Planning"]
+  },
+  {
+    "title": "On Writing Tech Specs",
+    "url": "https://codeburst.io/on-writing-tech-specs-6404c9791159?gi=147dabb57a56",
+    "tags": ["Technical Specifications", "Documentation", "Engineering Process"]
+  },
+  {
+    "title": "Design Patterns for Managing Up",
+    "url": "https://queue.acm.org/detail.cfm?id=3308563",
+    "tags": ["Managing Up", "Design Patterns", "Leadership"]
+  },
+  {
+    "title": "HN Discussion: Showing Work as a Remote",
+    "url": "https://news.ycombinator.com/item?id=16197364",
+    "tags": ["Remote Work", "Visibility", "Discussion"]
+  },
+  {
+    "title": "HBR: 8 Ways Leaders Delegate Successfully",
+    "url": "https://hbr.org/2019/08/8-ways-leaders-delegate-successfully",
+    "tags": ["Delegation", "Leadership", "HBR"]
+  },
+  {
+    "title": "Commoditize Your Complement",
+    "url": "https://www.gwern.net/Complement",
+    "tags": ["Strategy", "Business Strategy", "Open Source"]
+  },
+  {
+    "title": "Don't Call Yourself a Programmer",
+    "url": "https://kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/",
+    "tags": ["Career Advice", "Software Engineering", "Professional Development"]
+  },
+  {
+    "title": "HBR: How to Handle Feeling Overworked",
+    "url": "https://hbr.org/podcast/2021/12/how-to-handle-feeling-overworked",
+    "tags": ["Burnout", "Work-Life Balance", "HBR", "Podcast"]
+  },
+  {
+    "title": "HBR: On the Brink of Burnout",
+    "url": "https://hbr.org/podcast/2021/02/on-the-brink-of-burnout",
+    "tags": ["Burnout", "Mental Health", "HBR", "Podcast"]
+  },
+  {
+    "title": "HBR: How Can I Set the Right Boundaries in a New Job?",
+    "url": "https://hbr.org/podcast/2024/05/how-can-i-set-the-right-boundaries-in-a-new-job",
+    "tags": ["Boundaries", "Work-Life Balance", "HBR", "Podcast"]
+  },
+  {
+    "title": "HBR: How Do I Get Results Without Feeling Burned Out?",
+    "url": "https://hbr.org/podcast/2024/03/how-do-i-get-results-without-feeling-burned-out",
+    "tags": ["Burnout", "Performance", "HBR", "Podcast"]
+  },
+  {
+    "title": "How to Rid Your Company of Toxic Employees",
+    "url": "https://insight.kellogg.northwestern.edu/article/how-to-rid-your-company-of-toxic-employees",
+    "tags": ["Toxic Employees", "HR", "Management"]
+  },
+  {
+    "title": "What to Do After a Layoff",
+    "url": "https://art19.com/shows/well-adjusting/episodes/d3b14bac-def7-4054-a3e7-fdc21e42ee6b",
+    "tags": ["Layoffs", "Career Transition", "Recovery"]
+  },
+  {
+    "title": "SE Radio: Reorganizations with Han Yuan",
+    "url": "https://se-radio.net/2024/02/se-radio-601-han-yuan-on-reorganizations/",
+    "tags": ["Reorganizations", "Change Management", "Podcast"]
+  },
+  {
+    "title": "How to Do an Effective Re-Org",
+    "url": "https://sfelc.com/podcasts/how-to-do-an-effective-re-org-aaron-erickson-orgspace-mike-tria-atlassian",
+    "tags": ["Reorganizations", "Change Management", "Leadership"]
+  },
+  {
+    "title": "Manager Tools: Compassionate Layoffs",
+    "url": "https://www.manager-tools.com/2005/10/compassionate-layoffs-hall-fame-guidance",
+    "tags": ["Layoffs", "Compassionate Leadership", "Manager Tools"]
+  },
+  {
+    "title": "Manager Tools: How to Lay Off a Direct Part 1",
+    "url": "https://www.manager-tools.com/2023/02/how-lay-direct-part-1-hall-fame-guidance",
+    "tags": ["Layoffs", "Manager Tools", "Difficult Conversations"]
+  },
+  {
+    "title": "Manager Tools: How to Lay Off a Direct Part 2",
+    "url": "https://www.manager-tools.com/2023/03/how-lay-direct-part-2-hall-fame-guidance",
+    "tags": ["Layoffs", "Manager Tools", "Difficult Conversations"]
+  },
+  {
+    "title": "Manager Tools: Decisions Not Choices Part 2",
+    "url": "https://www.manager-tools.com/2020/10/decisions-not-choices-part-2-hall-fame-guidance",
+    "tags": ["Decision Making", "Leadership", "Manager Tools"]
+  },
+  {
+    "title": "Building Autonomous Teams and Engineering Career Ladders",
+    "url": "https://sfelc.com/podcasts/building-autonomous-teams-and-engineering-career-ladders-sri-viswanath",
+    "tags": ["Autonomous Teams", "Career Development", "Engineering"]
+  },
+  {
+    "title": "Debate: Flat vs Hierarchical Organizations",
+    "url": "https://sfelc.com/podcasts/debate-flat-vs-hierarchical-organizations-farhan-thawar-jerry-krikheli",
+    "tags": ["Organization Structure", "Hierarchy", "Leadership"]
+  },
+  {
+    "title": "Spend Time on What Matters with Will Larson",
+    "url": "https://sfelc.com/podcasts/spend-time-on-what-matters-will-larson-cto-calm",
+    "tags": ["Prioritization", "Time Management", "CTO"]
+  },
+  {
+    "title": "2023 Interview with Will Larson",
+    "url": "https://www.youtube.com/watch?v=TkA5A7BJF2k",
+    "tags": ["Will Larson", "Engineering Leadership", "Video"]
+  },
+  {
+    "title": "Path to Engineering Manager of Managers",
+    "url": "https://lethain.com/path-to-eng-manager-of-managers",
+    "tags": ["Engineering Management", "Career Progression", "Leadership"]
+  },
+  {
+    "title": "Overcome the 5 Dysfunctions of a Team Part 2",
+    "url": "https://medium.com/the-mission/part-2-overcome-the-5-dysfunctions-of-a-team-ef922309f8b5",
+    "tags": ["Team Dysfunction", "Leadership", "Team Building"]
+  },
+  {
+    "title": "HBR: What Only the CEO Can Do",
+    "url": "https://hbr.org/2009/05/what-only-the-ceo-can-do",
+    "tags": ["CEO", "Executive Leadership", "Strategy", "HBR"]
+  },
+  {
+    "title": "Keith Rabois on How to be an Effective Executive",
+    "url": "https://delian.io/lessons-3",
+    "tags": ["Executive Leadership", "Keith Rabois", "Management"]
+  },
+  {
+    "title": "Conscious Career Growth with Wade Chambers",
+    "url": "https://sfelc.com/podcasts/conscious-career-growth",
+    "tags": ["Career Growth", "Leadership Development", "Consciousness"]
+  },
+  {
+    "title": "Conscious Career Growth Part 2 with Wade Chambers",
+    "url": "https://sfelc.com/podcasts/conscious-career-growth-part-2",
+    "tags": ["Career Growth", "Leadership Development", "Winning"]
+  },
+  {
+    "title": "HBR: How Do I Avoid a Career Plateau at Midlife?",
+    "url": "https://hbr.org/podcast/2024/04/how-do-i-avoid-a-career-plateau-at-midlife",
+    "tags": ["Career Plateau", "Midlife Career", "HBR", "Podcast"]
+  },
+  {
+    "title": "Knowledge Project: Naval Ravikant",
+    "url": "https://fs.blog/knowledge-project-podcast/naval-ravikant-171/",
+    "tags": ["Naval Ravikant", "Philosophy", "Success", "Podcast"]
+  },
+  {
+    "title": "Elided Branches (Camille Fournier's Blog)",
+    "url": "https://www.elidedbranches.com/",
+    "tags": ["Engineering Leadership", "Blog", "Camille Fournier"]
+  },
+  {
+    "title": "DevToManager Interview: Kim Moir",
+    "url": "https://devtomanager.com/interviews/kim-moir/",
+    "tags": ["Manager Transition", "Career Development", "Interview"]
+  },
+  {
+    "title": "Kimber Lockhart's Medium",
+    "url": "https://medium.com/@kimber_lockhart",
+    "tags": ["Engineering Leadership", "Blog", "Leadership"]
+  },
+  {
+    "title": "Software Lead Weekly",
+    "url": "https://softwareleadweekly.com/issues",
+    "tags": ["Newsletter", "Software Leadership", "Curation"]
+  },
+  {
+    "title": "Keith Rabois Lecture 14: How to Operate",
+    "url": "https://web.archive.org/web/20200113140527/https://genius.com/Keith-rabois-lecture-14-how-to-operate-annotated?referent_id=4336630#note-4336630",
+    "tags": ["Operations", "Keith Rabois", "Business"]
+  },
+  {
+    "title": "Dr. Deming: Management Today Does Not Know What Its Job Is - Part 1",
+    "url": "https://www.industryweek.com/operations/quality/article/21963885/dr-deming-management-today-does-not-know-what-its-job-is-part-1",
+    "tags": ["Quality Management", "Deming", "Operations"]
+  },
+  {
+    "title": "Dr. Deming: Management Today Does Not Know What Its Job Is - Part 2",
+    "url": "https://www.industryweek.com/operations/quality/article/21963886/dr-deming-management-today-does-not-know-what-its-job-is-part-2",
+    "tags": ["Quality Management", "Deming", "Operations"]
+  },
+  {
+    "title": "Acquired: Microsoft",
+    "url": "https://www.acquired.fm/episodes/microsoft",
+    "tags": ["Microsoft", "Business History", "Podcast"]
+  },
+  {
+    "title": "Acquired: Microsoft Volume II",
+    "url": "https://www.acquired.fm/episodes/microsoft-volume-ii",
+    "tags": ["Microsoft", "Business History", "Podcast"]
+  },
+  {
+    "title": "Internet History Podcast: AOL Time Warner Merger",
+    "url": "https://www.internethistorypodcast.com/2017/09/the-story-of-the-aoltime-warner-merger/",
+    "tags": ["AOL", "Time Warner", "Business History", "Podcast"]
+  },
+  {
+    "title": "Acquired: AOL Time Warner with Internet History Podcast",
+    "url": "https://www.acquired.fm/episodes/episode-44-aol-time-warner-with-the-internet-history-podcast",
+    "tags": ["AOL", "Time Warner", "Business History", "Podcast"]
+  },
+  {
+    "title": "Internet History Podcast: The Del.icio.us Story",
+    "url": "https://www.internethistorypodcast.com/2022/12/the-del-icio-us-story-with-joshua-schachter/",
+    "tags": ["Delicious", "Tech History", "Startups", "Podcast"]
+  },
+  {
+    "title": "Internet History Podcast: Microsoft CTO Kevin Scott",
+    "url": "https://www.internethistorypodcast.com/2019/05/microsoft-cto-kevin-scott/",
+    "tags": ["Kevin Scott", "Microsoft", "CTO", "Podcast"]
+  },
+  {
+    "title": "SE Radio: Joel Spolsky on Startups, Growth, and Valuation",
+    "url": "https://www.se-radio.net/2019/07/episode-373-joel-spolsky-on-startups-growth-and-valuation/",
+    "tags": ["Joel Spolsky", "Startups", "Valuation", "Podcast"]
+  },
+  {
+    "title": "Masters of Scale: Brian Chesky - Handcrafted (Airbnb)",
+    "url": "https://mastersofscale.com/brian-chesky-handcrafted",
+    "tags": ["Brian Chesky", "Airbnb", "Scaling", "Podcast"]
+  },
+  {
+    "title": "Masters of Scale: Stewart Butterfield - The Big Pivot (Slack)",
+    "url": "https://mastersofscale.com/stewart-butterfield-the-big-pivot/",
+    "tags": ["Stewart Butterfield", "Slack", "Pivots", "Podcast"]
+  },
+  {
+    "title": "Invest Like the Best: The Reality of AI - Intercom",
+    "url": "https://www.joincolossus.com/episodes/54663623/traynor-the-reality-of-ai",
+    "tags": ["AI", "Intercom", "Technology", "Podcast"]
+  },
+  {
+    "title": "Think Like an Economist: Gains from Trade and Specialization",
+    "url": "https://art19.com/shows/think-like-an-economist/episodes/abb4af12-01fa-4d8e-b7d5-a387ae9d989a",
+    "tags": ["Economics", "Trade", "Specialization", "Podcast"]
+  },
+  {
+    "title": "Bloomberg Odd Lots: The Theory on Why Everyone Went Crazy",
+    "url": "https://www.bloomberg.com/news/audio/2024-06-28/odd-lots-the-theory-on-why-everyone-went-crazy-podcast",
+    "tags": ["Economics", "Psychology", "Society", "Podcast"]
+  }
+]
