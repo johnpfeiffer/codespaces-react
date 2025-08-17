@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { extractMetadata } from '../markdownParser';
 
-function BlogList() {
+// Dynamically import all markdown files from the content directory
+const markdownModules = import.meta.glob('../content/*.md', { as: 'raw', eager: true });
+
+// BlogList discovers the list of markdown files in the content directory and returns a list of objects that have the filename, title, date, and excerpt
+function BlogList({ onNavigateToPost }) {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -12,51 +15,32 @@ function BlogList() {
 
   const loadPosts = async () => {
     try {
-      // Fetch the list of markdown files
-      const response = await fetch('/posts/index.json');
-      
-      if (!response.ok) {
-        // If index.json doesn't exist, try to discover markdown files
-        console.log('No index.json found, looking for markdown files...');
-        setPosts([]);
-        setLoading(false);
-        return;
-      }
+      // Process all imported markdown files
+      const postData = Object.entries(markdownModules).map(([path, content]) => {
+        // Extract filename from path (../content/filename.md -> filename)
+        const filename = path.split('/').pop().replace('.md', '');
+        
+        // Extract metadata from content
+        const { metadata } = extractMetadata(content);
+        
+        return {
+          filename,
+          title: metadata.title || filename.replace(/-/g, ' '),
+          date: metadata.date || '',
+          excerpt: metadata.excerpt || '',
+          url: `/post/${filename}`
+        };
+      });
 
-      const fileList = await response.json();
-      
-      // Load each markdown file and extract metadata
-      const postData = await Promise.all(
-        fileList.map(async (filename) => {
-          try {
-            const res = await fetch(`/posts/${filename}`);
-            const content = await res.text();
-            const { metadata } = extractMetadata(content);
-            
-            return {
-              filename: filename.replace('.md', ''),
-              title: metadata.title || filename.replace('.md', '').replace(/-/g, ' '),
-              date: metadata.date || '',
-              excerpt: metadata.excerpt || ''
-            };
-          } catch (err) {
-            console.error(`Error loading ${filename}:`, err);
-            return null;
-          }
-        })
-      );
+      // Sort by date (newest first)
+      const sortedPosts = postData.sort((a, b) => {
+        if (!a.date && !b.date) return 0;
+        if (!a.date) return 1;
+        if (!b.date) return -1;
+        return new Date(b.date) - new Date(a.date);
+      });
 
-      // Filter out null entries and sort by date (newest first)
-      const validPosts = postData
-        .filter(post => post !== null)
-        .sort((a, b) => {
-          if (!a.date && !b.date) return 0;
-          if (!a.date) return 1;
-          if (!b.date) return -1;
-          return new Date(b.date) - new Date(a.date);
-        });
-
-      setPosts(validPosts);
+      setPosts(sortedPosts);
     } catch (error) {
       console.error('Error loading posts:', error);
       setPosts([]);
@@ -81,10 +65,6 @@ function BlogList() {
       {posts.length === 0 ? (
         <div style={{ marginTop: '2rem' }}>
           <p>No blog posts found.</p>
-          <p style={{ fontSize: '0.9rem', color: '#666', marginTop: '1rem' }}>
-            To add blog posts, create markdown files in <code>/apps/blog/public/posts/</code> 
-            and add an <code>index.json</code> file listing the markdown filenames.
-          </p>
         </div>
       ) : (
         <div style={{ marginTop: '2rem' }}>
@@ -98,17 +78,23 @@ function BlogList() {
               }}
             >
               <h2 style={{ marginBottom: '0.5rem' }}>
-                <Link 
-                  to={`/post/${post.filename}`}
+                <button
+                  onClick={() => onNavigateToPost(post.filename)}
                   style={{ 
                     color: '#0066cc',
-                    textDecoration: 'none'
+                    textDecoration: 'none',
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    fontSize: 'inherit',
+                    fontFamily: 'inherit',
+                    fontWeight: 'inherit'
                   }}
                   onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
                   onMouseOut={(e) => e.target.style.textDecoration = 'none'}
                 >
                   {post.title}
-                </Link>
+                </button>
               </h2>
               
               {post.date && (
@@ -134,18 +120,22 @@ function BlogList() {
                 </p>
               )}
               
-              <Link 
-                to={`/post/${post.filename}`}
+              <button
+                onClick={() => onNavigateToPost(post.filename)}
                 style={{ 
                   color: '#0066cc',
                   fontSize: '0.9rem',
-                  textDecoration: 'none'
+                  textDecoration: 'none',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  fontFamily: 'inherit'
                 }}
                 onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
                 onMouseOut={(e) => e.target.style.textDecoration = 'none'}
               >
                 Read more →
-              </Link>
+              </button>
             </article>
           ))}
         </div>

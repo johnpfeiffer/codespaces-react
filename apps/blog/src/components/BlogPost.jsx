@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
 import { parseMarkdown, extractMetadata } from '../markdownParser';
 
-function BlogPost() {
-  const { slug } = useParams();
+// Dynamically import all markdown files from the content directory
+const markdownModules = import.meta.glob('../content/*.md', { as: 'raw', eager: true });
+
+function BlogPost({ slug, onNavigateToList }) {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -17,13 +18,16 @@ function BlogPost() {
       setLoading(true);
       setError(null);
       
-      const response = await fetch(`/posts/${slug}.md`);
+      // Find the matching markdown file
+      const matchingPath = Object.keys(markdownModules).find(path => 
+        path.endsWith(`/${slug}.md`)
+      );
       
-      if (!response.ok) {
+      if (!matchingPath) {
         throw new Error('Post not found');
       }
 
-      const markdown = await response.text();
+      const markdown = markdownModules[matchingPath];
       const { metadata, content } = extractMetadata(markdown);
       const html = parseMarkdown(content);
 
@@ -53,35 +57,43 @@ function BlogPost() {
       <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
         <h1>Post Not Found</h1>
         <p>The blog post you're looking for doesn't exist.</p>
-        <Link 
-          to="/"
+        <button
+          onClick={onNavigateToList}
           style={{ 
             color: '#0066cc',
-            textDecoration: 'none'
+            textDecoration: 'none',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            fontFamily: 'inherit'
           }}
           onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
           onMouseOut={(e) => e.target.style.textDecoration = 'none'}
         >
           ← Back to all posts
-        </Link>
+        </button>
       </div>
     );
   }
 
   return (
     <article style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
-      <Link 
-        to="/"
+      <button
+        onClick={onNavigateToList}
         style={{ 
           color: '#0066cc',
           textDecoration: 'none',
-          fontSize: '0.9rem'
+          fontSize: '0.9rem',
+          background: 'none',
+          border: 'none',
+          cursor: 'pointer',
+          fontFamily: 'inherit'
         }}
         onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
         onMouseOut={(e) => e.target.style.textDecoration = 'none'}
       >
         ← Back to all posts
-      </Link>
+      </button>
       
       <header style={{ marginTop: '2rem', marginBottom: '2rem' }}>
         <h1 style={{ marginBottom: '0.5rem' }}>{post.title}</h1>
