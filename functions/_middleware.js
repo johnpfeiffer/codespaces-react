@@ -85,25 +85,9 @@ export async function onRequest(context) {
       });
     }
     
-    // Rewrite JavaScript files for API calls
-    if (contentType.includes('javascript')) {
-      let js = await response.text();
-      
-      console.log('Rewriting JS for:', appName);
-      
-      // Rewrite fetch calls to include app prefix
-      js = js.replace(/fetch\(['"]\/api/g, `fetch('/${appName}/api`);
-      js = js.replace(/fetch\(['"]\/(?!http)/g, `fetch('/${appName}/`);
-      
-      // Rewrite router paths if needed
-      js = js.replace(/path:\s*['"]\//g, `path: '/${appName}/`);
-      
-      return new Response(js, {
-        status: response.status,
-        statusText: response.statusText,
-        headers: response.headers
-      });
-    }
+    // Don't rewrite JavaScript files - they can break easily
+    // Instead, handle API calls and routing at the application level
+    // or use more targeted rewriting only for specific patterns
     
     // Return as-is for other content types
     return response;
