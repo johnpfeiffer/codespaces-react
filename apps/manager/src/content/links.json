@@ -1,0 +1,44 @@
+{
+  "links": [
+    {
+      "title": "a16z Podcast",
+      "url": "https://a16z.com/podcast/",
+      "tags": ["VC", "Technology", "Startups"]
+    },
+    {
+      "title": "Farnam Street Blog",
+      "url": "https://fs.blog/",
+      "tags": ["Mental Models", "Decision Making", "Leadership"]
+    },
+    {
+      "title": "Stratechery",
+      "url": "https://stratechery.com/",
+      "tags": ["Business Strategy", "Technology", "Analysis"]
+    },
+    {
+      "title": "Y Combinator Blog",
+      "url": "https://www.ycombinator.com/blog",
+      "tags": ["VC", "Startups", "Entrepreneurship"]
+    },
+    {
+      "title": "Harvard Business Review Podcasts",
+      "url": "https://hbr.org/podcasts",
+      "tags": ["Management", "Leadership", "Business"]
+    },
+    {
+      "title": "TED Talks - Technology",
+      "url": "https://www.ted.com/topics/technology",
+      "tags": ["Technology", "Innovation", "Computer Science"]
+    },
+    {
+      "title": "Sam Altman's Blog",
+      "url": "https://blog.samaltman.com/",
+      "tags": ["AI", "Startups", "VC", "Technology"]
+    },
+    {
+      "title": "AI and the Future of Work",
+      "url": "https://www.youtube.com/watch?v=example1",
+      "tags": ["AI", "Future of Work", "Management"]
+    }
+  ]
+}
