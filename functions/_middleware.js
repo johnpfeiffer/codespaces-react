@@ -31,13 +31,13 @@ export async function onRequest(context) {
   let targetPath;
   if (restOfPath === '' || !restOfPath) {
     // Root of app - serve index.html
-    newPath = `/apps/${appName}/index.html`;
+    targetPath = `/apps/${appName}/index.html`;
   } else if (restOfPath.includes('.')) {
     // Has file extension - probably an asset
-    newPath = `/apps/${appName}/${restOfPath}`;
+    targetPath = `/apps/${appName}/${restOfPath}`;
   } else {
     // No extension - probably a route, serve index.html for SPA
-    newPath = `/apps/${appName}/index.html`;
+    targetPath = `/apps/${appName}/index.html`;
   }
   
 // Fetch the resource
